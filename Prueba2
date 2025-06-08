@@ -1,0 +1,93 @@
+#ABRAHAM SANCHEZ MARTINEZ --> AS
+#  PRACTICA1 - PYTHON
+
+
+
+#Funciones
+
+
+def capturaValores (listaU):
+    lista = [] #AS: lista vacia que contendra los numeros capturados
+    dato = 1
+    
+    while float(dato) < numeroCliente :
+        dato = input("Dame el numero ")
+        lista.append(dato) #añade dato a la lista
+    return lista
+
+
+def sumatoria (lista):
+    acumulado = 0
+    for numero in lista: #ciclo for en donde recorro los valores de la lista
+            acumulado = acumulado + float(numero)
+    return acumulado
+
+
+def promedio (lista):
+    prom = sumatoria(resultado1)/numeroCliente
+    return prom
+
+
+def mayor (lista):
+    elemento = 0
+
+    for numero in lista: #ciclo for en donde recorro los valores de la lista
+        if float(numero) > float(elemento):
+            elemento = numero
+        else:
+            elemento = elemento
+         
+    return elemento
+
+
+def menor (lista):
+    elemento = 0
+
+    for numero in lista: #ciclo for en donde recorro los valores de la lista
+        if float(numero) <  float(elemento):
+            elemento = numero
+        else:
+            elemento = elemento
+         
+    return elemento
+
+
+
+def deNuevo (x):
+
+    if r == "Y" or "y":  
+        print("Sus datos capturados son: ", resultado1)
+        print("La sumatoria de sus datos es ", sumatoria(resultado1))
+        print("El promedio de sus datos es: ", promedio(resultado1))
+        print("El numero mayor es: " , mayor(resultado1))
+        print("El numero mayor es: " , menor(resultado1))
+    elif r == "N" or "n":
+        print("Termina ejecucion")
+    else:
+        print("Respuesta no valida")
+    return r
+
+
+
+
+
+#Programa principal
+
+numeroCliente = int(input("Especifique cuatos numeros a manejar:" )) #AS: El numero de veces que pide cliente
+
+
+resultado1 = capturaValores(numeroCliente) #mis lista con datos principales a emplear
+
+
+
+
+#######puntos extras
+
+r = input ("Desea volver a ejecutar el programa: Y/N ")
+deNuevo(r)
+
+    
+    
+
+
+
